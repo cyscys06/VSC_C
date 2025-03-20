@@ -19,5 +19,5 @@ int main()
     cout.put('!');
 
     cout << endl << "종료" << endl;
-    return 0;
+    
 }
