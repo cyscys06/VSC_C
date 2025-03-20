@@ -10,4 +10,4 @@ int main()
     const int CM = cm % 100;
 
     cout << "당신의 키는 " << M << "m " << CM << "cm 입니다." << endl;
-}170
+}
