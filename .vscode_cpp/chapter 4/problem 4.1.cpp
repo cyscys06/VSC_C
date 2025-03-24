@@ -7,11 +7,9 @@ int main()
     char WHJ; // WHJ: 원하는 학점
     int age;
     cout << "영문 퍼스트 네임(이름):_\b";
-    cin.get(EngF, 20);
-    cin.get();
+    cin.getline(EngF, 20);
     cout << "영문 라스트 네임(성):_\b";
     cin >> EngL;
-    cin.get();
     cout << "학생이 원하는 학점:_\b";
     cin >> WHJ;
     cout << "나이:_\b";
