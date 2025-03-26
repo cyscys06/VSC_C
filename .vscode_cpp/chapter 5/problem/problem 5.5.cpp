@@ -15,6 +15,7 @@ int main()
     int i = 0;
     int total = 0; // 연간 총 판매량(쓰레기값 생성 방지를 위해 임의의 값(0) 할당 필요)
     int MS[sales]; // 월간 판매량 저장하는 int형 배열 생성
+    
     while (i < 12)
     {
         cout << year[i] << "의 책 판매량을 입력하시오: ";
