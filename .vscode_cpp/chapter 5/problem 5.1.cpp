@@ -11,7 +11,7 @@ int main()
     int total;
     
     for (int i = FI; i <= SI; i++)
-        total = total + i;
+        total =+ i;
     
     cout << "모든 정수들의 합: " << total << endl;
     return 0;
