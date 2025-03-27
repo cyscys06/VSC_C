@@ -5,7 +5,7 @@ int main()
     using namespace std;
 
     const int months = 12;
-    const int sales = 20; // 배열 크기 변수
+    const int sales = 20; 
     string year[months] = 
     {
         "jan","feb","mar","apr","may","jun",

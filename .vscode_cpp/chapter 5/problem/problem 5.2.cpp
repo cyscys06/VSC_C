@@ -2,17 +2,15 @@
 #include <array>
 using namespace std;
 
-int main() {
-    const int ArSize = 101;  // 0~100: 101개
-    array<long double, ArSize> factorials; // array 객체를 통해 크기 ArSize이고 자료형 long double인 
-                                           // 배열 팩토리얼 초기화 
-
-    factorials[0] = 1.0L; 
-    factorials[1] = 1.0L;  
-
-    for (int i = 2; i <= 100; i++) 
+int main() 
+{
+    const int ArSize = 100; 
+    array<long double, ArSize> factorials; // array 객체를 통해 크기 ArSize이고 자료형 long double인 팩토리얼 선언
+    factorials[0] = factorials[1] = 1.0L; // L안붙이면 int형으로 인식
+       
+    for (int i = 2; i <= ArSize; i++) 
         factorials[i] = i * factorials[i - 1];
     
-    cout << "100! = " << factorials[100] << endl;
+    cout << "100! = " << factorials[ArSize] << endl;
     return 0;
 }

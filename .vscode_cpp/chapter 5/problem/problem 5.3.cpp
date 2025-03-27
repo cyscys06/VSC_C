@@ -7,9 +7,7 @@ int main()
     cin >> num;
 
     int total = 0;
-    while (num != 0) // for: 사용횟수가 정해질때 
-                                   // while: 사용횟수가 정해져 있지 않을때 
-                                   // -> 특정조건 만족할때까지 계속 반복(true), 만족하면 반복 종료(false)
+    while (num != 0) 
     {
         total += num;
         cout << "입력된 수들의 누계: " << total << endl;
