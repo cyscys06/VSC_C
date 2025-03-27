@@ -1,33 +1,34 @@
 #include <iostream>
+#include <string>
 int main()
-
 {
     using namespace std;
     struct car
     {
-        char company[10];
+        string company;
         int year;
     };
     int num;
-    cout << "ëª‡ ëŒ€ì˜ ì°¨ë¥¼ ëª©ë¡ìœ¼ë¡œ ê´€ë¦¬í•˜ì‹œê² ìŠµë‹ˆê¹Œ? ";
+    cout << "¸î ´ëÀÇ Â÷¸¦ ¸ñ·ÏÀ¸·Î °ü¸®ÇÏ½Ã°Ú½À´Ï±î? ";
     cin >> num;
+    cin.get();
 
     car * cars = new car[num];
 
     for(int i = 0; i < num; i++)
     {
-        cout << "ìë™ì°¨ #" << i + 1 << ":" << endl;
-        cout << "ì œì‘ì—…ì²´: ";
-        cin >> cars[i].company;
-        cin.get();
-        cout << "ì œì‘ë…„ë„: ";
+        cout << "ÀÚµ¿Â÷ #" << i + 1 << ":" << endl;
+        cout << "Á¦ÀÛ¾÷Ã¼: ";
+        getline(cin, cars[i].company);
+        cout << "Á¦ÀÛ³âµµ: ";
         cin >> cars[i].year;
         cin.get();
     }
 
-    cout << "í˜„ì¬ ê·€í•˜ê°€ ë³´ìœ í•˜ê³  ìˆëŠ” ìë™ì°¨ ëª©ë¡ì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤: " << endl;
+    cout << "ÇöÀç ±ÍÇÏ°¡ º¸À¯ÇÏ°í ÀÖ´Â ÀÚµ¿Â÷ ¸ñ·ÏÀº ´ÙÀ½°ú °°½À´Ï´Ù: " << endl;
     
-    for (int j = 0; j < num; j++)
-    cout << cars[j].year << "ë…„í˜•" << cars[j].company << endl;
+    for (int i = 0; i < num; i++)
+    cout << cars[i].year << "³âÇü " << cars[i].company << endl;
     
+    delete[] cars;
 }
