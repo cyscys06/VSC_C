@@ -1,4 +1,6 @@
 #include <iostream>
+
+#define endl /n
 int main()
 {
     using namespace std;

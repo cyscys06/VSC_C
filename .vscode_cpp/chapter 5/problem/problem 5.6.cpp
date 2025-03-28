@@ -21,13 +21,14 @@ int main()
     {
        for(int m = 0; m < months; m++)
        {
-        cout << TOTAL[y][m] << "의 책 판매량을 입력하시오: ";
-        cin >> num;
-        Y[y] += num;
+            cout <<2024+y <<TOTAL[y][m] << "의 책 판매량을 입력하시오: ";
+            cin >> num;
+            Y[y] += num;
        }
+       cout << 2024+y<<"년 총 판매량: " << Y[0] << "권" << endl;
+    
     }
     
-    cout << "2025년 총 판매량: " << Y[0] << "권" << endl;
     cout << "2026년 총 판매량: " << Y[1] << "권" << endl;
     cout << "2027년 총 판매량: " << Y[2] << "권" << endl;
 

@@ -8,10 +8,10 @@ int main()
     cout << "두 번째 정수를 입력하시오: ";
     int SI; // Second Integer
     cin >> SI;
-    int total;
+    int total = 0;
     
     for (int i = FI; i <= SI; i++)
-        total =+ i;
+        total += i;
     
     cout << "모든 정수들의 합: " << total << endl;
     return 0;

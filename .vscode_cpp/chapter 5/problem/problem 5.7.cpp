@@ -9,7 +9,7 @@ int main()
         int year;
     };
     int num;
-    cout << "¸î ´ëÀÇ Â÷¸¦ ¸ñ·ÏÀ¸·Î °ü¸®ÇÏ½Ã°Ú½À´Ï±î? ";
+    cout << "ëª‡ ëŒ€ì˜ ì°¨ë¥¼ ëª©ë¡ìœ¼ë¡œ ê´€ë¦¬í•˜ì‹œê² ìŠµë‹ˆê¹Œ? ";
     cin >> num;
     cin.get();
 
@@ -17,18 +17,19 @@ int main()
 
     for(int i = 0; i < num; i++)
     {
-        cout << "ÀÚµ¿Â÷ #" << i + 1 << ":" << endl;
-        cout << "Á¦ÀÛ¾÷Ã¼: ";
+        cout << "ìë™ì°¨ #" << i + 1 << ":" << endl;
+        cout << "ì œì‘ì—…ì²´: ";
         cin.getline(cars[i].company, 20);
-        cout << "Á¦ÀÛ³âµµ: ";
+        cout << "ì œì‘ë…„ë„: ";
         cin >> cars[i].year;
         cin.get();
     }
 
-    cout << "ÇöÀç ±ÍÇÏ°¡ º¸À¯ÇÏ°í ÀÖ´Â ÀÚµ¿Â÷ ¸ñ·ÏÀº ´ÙÀ½°ú °°½À´Ï´Ù: " << endl;
+    cout << "í˜„ì¬ ê·€í•˜ê°€ ë³´ìœ í•˜ê³  ìˆëŠ” ìë™ì°¨ ëª©ë¡ì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤: " << endl;
     
     for (int i = 0; i < num; i++)
-    cout << cars[i].year << "³âÇü " << cars[i].company << endl;
+    cout << cars[i].year << "ë…„í˜• " << cars[i].company << endl;
     delete[] cars;
-    return 0;
+
+
 }

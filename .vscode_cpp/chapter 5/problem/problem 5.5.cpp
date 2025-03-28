@@ -4,8 +4,7 @@ int main()
 {
     using namespace std;
 
-    const int months = 12;
-    const int sales = 20; 
+    const int months = 12, sales = 20; 
     string year[months] = 
     {
         "jan","feb","mar","apr","may","jun",
