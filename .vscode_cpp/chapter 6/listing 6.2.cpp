@@ -14,12 +14,13 @@ int main()
         }
         else // ch가 \n 아니면 else구문 실행
         {
-            cout << ++ch; // ch에 1을 더한 값을 출력
+            cout << ch + 1; // ++ch: ch에 1을 더한 값을 출력 
+                            // ch + 1: ch를 정수형(아스키코드)으로 저장한 후 그 정수에 1을 더해 출력
         }
+        cin.get(ch);
+    }
         cout << "\n혼란스럽게 해서 죄송합니다.\n";
         return 0;
-    }
-
 
 
 
