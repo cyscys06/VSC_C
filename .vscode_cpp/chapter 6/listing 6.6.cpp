@@ -31,5 +31,5 @@ int main()
         index = 3; // 3번째 인덱스의 값
     }
     cout << "당신은 " << qualify[index] << "에 참가할 수 있습니다.\n";
-    return 0;
+    return 0;   
 }
