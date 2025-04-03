@@ -1,12 +1,10 @@
 #include <iostream>
 #include <cmath>
 void calculate(double x, double y); // x, y 받아서 조화평균 계산  
-using namespace std; // 이름공간을 함수 밖에 선언해놓으면 
-                     // 함수마다 이름공간을 따로 선언하는 수고를 덜 수 있다.
+using namespace std; 
 
 int main()
 {
-    
     double first, second;
     cout << "두 수를 입력: ";
     while (cin >> first >> second) // first, second 둘다 입력받아야 true
