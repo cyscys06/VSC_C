@@ -8,7 +8,7 @@ int main()
     int num;
     cout << "팩토리얼을 계산할 숫자를 입력하시오(숫자가 아닌 수 입력 시 종료): ";
 
-    while (cin >> num) // num 자료형이 int이므로 int형 입력 못받으면 잘못 입력, 루프 종료
+    while (cin >> num) // num 자료형이 int이므로 int형 값 입력 못받으면 false, 루프 종료
     {
         cout << num << "! = " << factorial(num) << endl;
         cout << "팩토리얼을 계산할 숫자를 입력하시오(숫자가 아닌 수 입력 시 종료): ";

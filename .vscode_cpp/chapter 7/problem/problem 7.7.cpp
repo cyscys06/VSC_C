@@ -21,7 +21,7 @@ int main()
             cin.clear(); // 입력버펴 삭제
             while (cin.get() != '\n')
                 continue;
-            cout << "잘못 입력했습니다. 가격을 입력하시오: ";
+            cout << "잘못 입력했습니다. 다시 가격을 입력하시오: ";
         }
         revalue(factor, properties, last); 
         show_array(properties, last);
