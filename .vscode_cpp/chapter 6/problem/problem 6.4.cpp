@@ -3,7 +3,6 @@ using namespace std;
 void a(), b(), c(), d(); // 사용자 정의 함수 쓸때는 main함수 밖에서 미리 선언 및 정의 후 main함수 안에서 함수를 호출하여 사용한다.
 int main()
 {
-    
     const int strsize = 20;
     struct bop
     {
