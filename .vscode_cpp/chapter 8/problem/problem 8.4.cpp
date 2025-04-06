@@ -17,20 +17,25 @@ void set(stringy& s, const char* cstr)
 }
 
 // stringy 출력 함수 (1회 또는 n회)
-void show(const stringy& s, int n = 1) {
-    for (int i = 0; i < n; ++i) {
+void show(const stringy& s, int n = 1) 
+{
+    for (int i = 0; i < n; ++i) 
+    {
         cout << s.str << endl;
     }
 }
 
 // C-style 문자열 출력 함수 (1회 또는 n회)
-void show(const char* cstr, int n = 1) {
-    for (int i = 0; i < n; ++i) {
+void show(const char* cstr, int n = 1) 
+{
+    for (int i = 0; i < n; ++i) 
+    {
         cout << cstr << endl;
     }
 }
 
-int main() {
+int main() 
+{
     stringy beany;
     char testing[] = "Reality isn't what it used to be.";
 
