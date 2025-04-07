@@ -2,7 +2,7 @@
 const int SIZE = 10;
 using namespace std;
 
-int input(double arr[], int size); // arr[]: 매개변수로 배열이 올 것임을 알림, size: 배열크기  
+int input(double arr[], int n); // arr[]: 매개변수로 배열이 올 것임을 알림, n: 배열크기  
 void output(double arr[], int n); 
 double average_calculate(double arr[], int n); 
 // n: 입력값 수
