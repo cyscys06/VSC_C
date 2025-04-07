@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-void calculate(double x, double y); // x, y 받아서 조화평균 계산  
+double calculate(double x, double y); // x, y 받아서 조화평균 계산  
 using namespace std; 
 
 int main()
@@ -13,14 +13,14 @@ int main()
         {
             break;
         }
-        calculate(first, second); // 사용자 정의 함수 main함수에 사용할때는 자료형 다 빼고 함수이름, 매개변수만 넣기
+        cout << "입력한 두 수의 조화평균: " << calculate(first, second); << endl; 
     } 
     cout << "프로그램을 종료합니다.";
     return 0;
 }
 
-void calculate(double x, double y) // 함수 정의(반환 안해도 됨)
+double calculate(double x, double y) // 함수 정의(반환 안해도 됨)
 {
     double harmony = 2.0 * x * y / (x + y); // 조화평균 계산식
-    cout << "입력한 두 수의 조화평균: " << harmony << endl;
+    return harmony;
 }
