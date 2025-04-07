@@ -5,8 +5,7 @@ long double probability2(unsigned numbers);
 
 int main()
 {
-    double total1, choices1, total2; // choices2는 항상 1이다. reset: 다시입력
-    char reset;
+    double total1, choices1, total2; // choices2는 항상 1이다. 
     
     cout << "첫번째 범위에서 고를 전체 수의 개수와 뽑을 수의 개수,\n";
     cout << "두번째 범위(파워볼)에서 고를 수의 개수를 차례대로 입력하십시오(끝내려면 q): ";
