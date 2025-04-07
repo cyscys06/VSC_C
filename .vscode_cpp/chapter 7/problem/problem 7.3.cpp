@@ -10,7 +10,7 @@ struct box // 구조체 선언
     float length;
     float volume;
 };
-void a(box value);
+void a(box va);
 double b(box * members); // members: box 구조체를 지시하는 포인터
 
 int main()

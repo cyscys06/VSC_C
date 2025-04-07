@@ -2,14 +2,14 @@
 using namespace std;
 const int MAX = 5; // 배열 크기
 
-double* fill_array(double* begin, double* end);  // 입력 함수
-void show_array(const double* begin, const double* end);  // 출력 함수
-void revalue(double r, double* begin, double* end);  // 재평가 함수
+double* fill_array(double * begin, double * end);  // 입력 함수
+void show_array(const double * begin, const double * end);  // 출력 함수
+void revalue(double r, double * begin, double * end);  // 재평가 함수
 // 포인터 시작 begin, 종료 포인터 end
 int main()
 {
     double properties[MAX];
-    double* last = fill_array(properties, properties + MAX); // 시작점 + 배열 크기(MAX)
+    double * last = fill_array(properties, properties + MAX); // 시작점 + 배열 크기(MAX)
                                                              // = 배열 마지막 원소의 주소 바로 다음 값
     show_array(properties, last);
     if (last > properties) 
@@ -30,10 +30,10 @@ int main()
     return 0;
 }
 
-double* fill_array(double* begin, double* end) // 배열 입력
+double* fill_array(double * begin, double * end) // 배열 입력
 {
     double temp;
-    double* ptr; // 시작점인 포인터 변수 ptr
+    double * ptr; // 시작점인 포인터 변수 ptr
     
     for (ptr = begin; ptr < end; ptr++)
     {
@@ -57,9 +57,9 @@ double* fill_array(double* begin, double* end) // 배열 입력
     return ptr; // 마지막으로 채워진 위치 반환
 }
 
-void show_array(const double* begin, const double* end) // 배열 출력
+void show_array(const double * begin, const double * end) // 배열 출력
 {
-    for (const double* ptr = begin; ptr < end; ptr++)
+    for (const double * ptr = begin; ptr < end; ptr++)
     {
         cout << (ptr - begin + 1) << "번 부동산: " << *ptr << endl;
     }
@@ -67,7 +67,7 @@ void show_array(const double* begin, const double* end) // 배열 출력
 
 void revalue(double r, double* begin, double* end) // 배열 값 재평가
 {
-    for (double* ptr = begin; ptr < end; ptr++)
+    for (double * ptr = begin; ptr < end; ptr++)
     {
         *ptr *= r; // 모든 원소에 재평가율 곱하기
     }
