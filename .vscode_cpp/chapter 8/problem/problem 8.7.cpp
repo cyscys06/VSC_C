@@ -45,7 +45,7 @@ return count;
 
 template <typename T> double SumArray(T * arr[], int n) // 채무목록 합계
 {
-    int total;
+    int total = 0;
     for (int i = 0; i < n; i++)
     {
         total += *arr[i];

@@ -13,7 +13,7 @@ int main()
         {        
             double first = probability1(total1, choices1);
             double second = probability2(total2);
-            cout << "첫번째 범위에서의 확률: 1/" << first << endl;
+            cout << "첫번째 범위에서의 확률: " << first << endl;
             cout << "두번째 범위에서의 확률: 1/" << second << endl;
             cout << "복권에 당첨될 총 확률: 1/" << first * second << endl;
             cout << "다시 정해진 형식으로 수를 입력하시오(끝내려면 q): ";
@@ -29,7 +29,7 @@ long double probability1(unsigned numbers, unsigned picks) // 첫번째 범위
 
     for (n1 = numbers, p1 = picks; p1 > 0; n1--, p1--)
     {
-        result1 *= (n1 / p1);
+        result1 *= (p1 / n1);
     }
     return result1;
 }

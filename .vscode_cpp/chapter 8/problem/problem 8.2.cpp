@@ -3,13 +3,13 @@ using namespace std;
 
 struct CandyBar 
 {
-    const char* brand;  
+    const char * brand;  
     double weight;
     int calories;
 };
 
-void set(CandyBar & cb, const char* brand = "Millennium Munch", double weight = 2.85, int calories = 350); // 디폴트값 할당
-void show(const CandyBar & cb);                                                                            // 문자열: 읽기전용 데이터이므로 const 사용
+void set(CandyBar & cb, const char * brand = "Millennium Munch", double weight = 2.85, int calories = 350); // 디폴트값 할당
+void show(const CandyBar & cb); // cb: 참조                                                                 // 문자열: 읽기전용 데이터이므로 const 사용
 
 int main() 
 {
@@ -19,7 +19,7 @@ int main()
     return 0;
 }
 
-void set(CandyBar & cb, const char* brand, double weight, int calories) // 함수 정의에는 디폴트값 안씀
+void set(CandyBar & cb, const char * brand, double weight, int calories) // 함수 정의에는 디폴트값 안씀
 {
     cb.brand = brand;  
     cb.weight = weight;

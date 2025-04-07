@@ -9,7 +9,7 @@ int main()
 {
     string text;
     cout << "문자열을 입력하시오 (끝내려면 q): ";
-    cin >> text;
+    getline(cin, text);
     while (!(text == "q")) // string이면 큰따옴표 char면 작은따옴표
     {
         UPPER(text);

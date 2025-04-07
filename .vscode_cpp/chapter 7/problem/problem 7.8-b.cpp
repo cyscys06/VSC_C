@@ -15,7 +15,7 @@ void show(S_exp da);
 
 int main() 
 {
-    S_exp new_exp = {};
+    S_exp new_exp;
     fill(&new_exp);
     show(new_exp);
     return 0;

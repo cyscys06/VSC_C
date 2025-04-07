@@ -45,7 +45,7 @@ int getinfo(student pa[], int n) // 학생들의 정보 입력
         cout << "학생의 이름을 입력하시오: ";
         if (pa[i].fullname[0] == '\0')  // 널 문자(빈칸이후) 입력받으면 종료
         {                               // pa[i].fullname[0]: pa배열의 i번째 인덱스에 있는 멤버인                           
-            cout << "입력을 종료합니다";  // fullname 배열의 0번째 인덱스 = 학생 이름 입력할때 첫번째 원소(인덱스)
+            cout << "입력을 종료합니다" // fullname 배열의 0번째 인덱스 = 학생 이름 입력할때 첫번째 원소(인덱스)
             break;                      // -> 별도 입력없이(빈줄로) 엔터 누르면 0번째 인덱스에 널 문자 저장되어(아무것도 없음) 조건식 충족 
         }
         cin.getline(pa[i].fullname, SLEN); // cin.getline(배열이름, 배열크기);
