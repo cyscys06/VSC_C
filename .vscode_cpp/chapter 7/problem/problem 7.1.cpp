@@ -13,7 +13,7 @@ int main()
         {
             break;
         }
-        cout << "입력한 두 수의 조화평균: " << calculate(first, second); << endl; 
+        cout << "입력한 두 수의 조화평균: " << calculate(first, second) << endl; 
     } 
     cout << "프로그램을 종료합니다.";
     return 0;
