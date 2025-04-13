@@ -4,47 +4,48 @@ using namespace std;
 
 int main()
 {
-    double deposit;
-    double withdraw; // ìž…ê¸ˆì•¡
-    char option;
-    cout << "ê³„ì¢Œ ìž…ì¶œê¸ˆ í”„ë¡œê·¸ëž¨. ë‹¤ìŒ ì„ íƒ ì‚¬í•­ ì¤‘ì—ì„œ í•˜ë‚˜ë¥¼ ì„ íƒí•˜ì‹­ì‹œì˜¤.\n"
-            "a) ì •ë³´ ì¶œë ¥      b) ìž…ê¸ˆ\n"
-            "c) ì¶œê¸ˆ           q) í”„ë¡œê·¸ëž¨ ì¢…ë£Œ\n";
+    Account myAccount; // Å¬·¡½º °´Ã¼ »ý¼º(±¸Á¶Ã¼¿Í °°À½)
+    double deposit; // ÀÔ±Ý¾×
+    double withdraw; // Ãâ±Ý¾×
+    int option; // ¼±ÅÃÁö
+    
+    cout << "°èÁÂ ÀÔÃâ±Ý ÇÁ·Î±×·¥. ´ÙÀ½ ¼±ÅÃ »çÇ× Áß¿¡¼­ ÇÏ³ª¸¦ ¼±ÅÃÇÏ½Ê½Ã¿À.\n"
+            "1) Á¤º¸ Ãâ·Â      2) ÀÔ±Ý\n"
+            "3) Ãâ±Ý           q) ÇÁ·Î±×·¥ Á¾·á\n";
+    
     while (cin >> option) 
     {
         switch(option)
             {
-	              case 'a': output();
+	              case 1: myAccount.output(); // Å¬·¡½ºÀÇ ¸â¹öÇÔ¼ö
                         continue;
 	            
-                case 'b': cout << "ìž…ê¸ˆ ì•¡ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤: \n";
+                case 2: cout << "ÀÔ±Ý ¾×¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: \n";
                           cin >> deposit;
                           while (deposit < 0)
                           {
-                            cout << "ìŒìˆ˜ëŠ” ìž…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ìž…ë ¥í•˜ì‹­ì‹œì˜¤.\n";
+                            cout << "À½¼ö´Â ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇÏ½Ê½Ã¿À.\n";
                           }
-                          ipgeum(deposit);
-                          cout << deposit << "ì›ì´ ìž…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤.\n";
+                          myAccount.ipgeum(deposit);
+                          cout << deposit << "¿øÀÌ ÀÔ±ÝµÇ¾ú½À´Ï´Ù.\n";
                           continue;
 	            
-                case 'c': cout << "ì¶œê¸ˆ ì•¡ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤: \n";
+                case 3: cout << "Ãâ±Ý ¾×¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: \n";
                           cin >> withdraw;
                           while (withdraw < 0)
                           {
-                            cout << "ìŒìˆ˜ëŠ” ìž…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ìž…ë ¥í•˜ì‹­ì‹œì˜¤.\n";
+                            cout << "À½¼ö´Â ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇÏ½Ê½Ã¿À.\n";
                           }
-                          choolgeum(withdraw);
-                          cout << withdraw << "ì›ì´ ì¶œê¸ˆë˜ì—ˆìŠµë‹ˆë‹¤.\n";
+                          myAccount.choolgeum(withdraw);
+                          cout << withdraw << "¿øÀÌ Ãâ±ÝµÇ¾ú½À´Ï´Ù.\n";
                           continue;
                 
-                case 'q': cout << "í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.\n";
-                          break;
-                
-                default : cout << "ë‹¤ìŒ ì„ íƒ ì‚¬í•­ ì¤‘ì—ì„œ í•˜ë‚˜ë¥¼ ì„ íƒí•˜ì‹­ì‹œì˜¤.\n"
-                "a) ì •ë³´ ì¶œë ¥      b) ìž…ê¸ˆ\n"
-                "c) ì¶œê¸ˆ           q) í”„ë¡œê·¸ëž¨ ì¢…ë£Œ\n";
+                default : cout << "´ÙÀ½ ¼±ÅÃ »çÇ× Áß¿¡¼­ ÇÏ³ª¸¦ ¼±ÅÃÇÏ½Ê½Ã¿À.\n"
+                "a) Á¤º¸ Ãâ·Â      b) ÀÔ±Ý\n"
+                "c) Ãâ±Ý           q) ÇÁ·Î±×·¥ Á¾·á\n";
                 continue;
             }
     }
+    cout << "ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.\n";
     return 0;
 }
