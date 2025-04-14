@@ -1,4 +1,3 @@
-// usenamesp.cpp -- SALES 네임스페이스와 Sales 클래스를 사용하는 메인 프로그램
 #include <iostream>
 #include "namesp.h"
 

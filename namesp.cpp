@@ -1,4 +1,3 @@
-// namesp.cpp -- Sales 클래스와 메서드 구현
 #include <iostream>
 #include "namesp.h"
 
