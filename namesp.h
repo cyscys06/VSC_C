@@ -5,27 +5,19 @@ namespace SALES
 {
     const int QUARTERS = 4;
     
-    class Sales {
+    class Sales 
+    {
     private:
-        double sales[QUARTERS];
-        double average;
-        double max;
-        double min;
+        double sales[QUARTERS]; // 분기별 판매액
+        double average; // 평균
+        double max; // 최대
+        double min; // 최소
         
     public:
-        // 기본 생성자
         Sales(); // 객체 인자 없을때
-        
-        // 배열 데이터로부터 초기화하는 생성자
         Sales(const double ar[], int n); // 객체 인자 있을때
-        
-        // 배열로부터 데이터를 가져와 Sales 객체에 설정하는 메서드
-        void setSales(const double ar[], int n);
-        
-        // 사용자로부터 데이터를 입력받아 설정하는 메서드
-        void setSales();
-        
-        // 모든 정보 출력 메서드
+        void setSales(const double ar[], int n); // 비대화식(객체의 인자 전달)
+        void setSales(); // 대화식(사용자 직접입력)
         void showSales() const; // 출력(읽기전용 데이터)
     };
 }

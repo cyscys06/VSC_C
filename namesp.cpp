@@ -1,10 +1,10 @@
 #include <iostream>
 #include "namesp.h"
+using namespace std;
 
 namespace SALES
 {
-    // 기본 생성자
-    Sales::Sales()
+    Sales::Sales() // 디폴트
     {
         for (int i = 0; i < QUARTERS; i++)
         {
@@ -14,87 +14,74 @@ namespace SALES
         max = 0.0;
         min = 0.0;
     }
-    
-    // 배열 데이터로부터 초기화하는 생성자
+
     Sales::Sales(const double ar[], int n)
     {
         setSales(ar, n);
     }
-    
-    // 배열로부터 데이터를 가져와 Sales 객체에 설정하는 메서드
+
     void Sales::setSales(const double ar[], int n)
     {
-        // 배열에서 데이터 복사 (n과 QUARTERS 중 작은 수만큼)
-        int items = (n < QUARTERS) ? n : QUARTERS;
-        
-        // 판매액 데이터 복사
-        for (int i = 0; i < items; i++)
+        int items = (n < QUARTERS) ? n : QUARTERS; // 삼항 연산자: n이 QUARTERS보다 작으면 n, 아니면 QUARTERS
+        double sum = 0.0; // 총합
+
+        for (int i = 0; i < items; i++) // 매개변수 ar배열 값 sales에 복사
         {
             sales[i] = ar[i];
         }
-        
-        // 남은 항목들을 0으로 초기화
-        for (int i = items; i < QUARTERS; i++)
+        for (int i = items; i < QUARTERS; i++) // sales배열의 남은(값이 할당되지 않은) 인덱스들 전부 0으로 초기화(i = items)
         {
             sales[i] = 0.0;
         }
-        
-        // 통계 계산
-        // 평균
-        double sum = 0.0;
-        for (int i = 0; i < items; i++)
+        for (int i = 0; i < items; i++) // 총합 구하는 과정
         {
             sum += sales[i];
         }
-        average = (items > 0) ? sum / items : 0.0;
         
-        // 최댓값과 최솟값
-        if (items > 0)
+        if (items > 0) // 입력된 값 있을때
         {
-            // 최댓값 찾기
-            max = sales[0];
+            average = sum / items; 
+            
+            max = sales[0]; // 최대 구하는 과정
             for (int i = 1; i < items; i++)
             {
                 if (sales[i] > max)
                     max = sales[i];
             }
-            
-            // 최솟값 찾기
-            min = sales[0];
+            min = sales[0]; // 최소 구하는 과정
             for (int i = 1; i < items; i++)
             {
                 if (sales[i] < min)
                     min = sales[i];
             }
         }
-        else
+        else // 입력된 값이 없을때
         {
             max = 0.0;
             min = 0.0;
+            average = 0.0;
         }
     }
     
-    // 대화식 버전: 사용자로부터 데이터를 입력받아 설정하는 메서드
     void Sales::setSales()
     {
-        std::cout << "4분기 판매액 정보를 입력하세요:\n";
+        cout << "4분기 판매액 정보를 입력하세요:\n";
         double temp[QUARTERS];
         
-        // 사용자로부터 각 분기 판매액 입력 받기
         for (int i = 0; i < QUARTERS; i++)
         {
-            std::cout << i + 1 << "분기 판매액: ";
-            while (!(std::cin >> temp[i]))
+            cout << i + 1 << "분기 판매액: ";
+            while (!(cin >> temp[i]))
             {
-                std::cin.clear();
-                while (std::cin.get() != '\n')
+                cin.clear();
+                while (cin.get() != '\n')
                     continue;
-                std::cout << "숫자를 입력하세요: ";
+                cout << "숫자를 입력하세요: ";
             }
         }
         
         // 입력 버퍼 정리
-        std::cin.get();
+        cin.get();
         
         // setSales 메서드를 활용하여 데이터 설정
         setSales(temp, QUARTERS);
@@ -103,14 +90,14 @@ namespace SALES
     // 모든 정보 출력 메서드
     void Sales::showSales() const
     {
-        std::cout << "판매액 정보:\n";
+        cout << "판매액 정보:\n";
         for (int i = 0; i < QUARTERS; i++)
         {
-            std::cout << i + 1 << "분기: " << sales[i] << std::endl;
+            cout << i + 1 << "분기: " << sales[i] << endl;
         }
         
-        std::cout << "평균 판매액: " << average << std::endl;
-        std::cout << "최대 판매액: " << max << std::endl;
-        std::cout << "최소 판매액: " << min << std::endl;
+        cout << "평균 판매액: " << average << endl;
+        cout << "최대 판매액: " << max << endl;
+        cout << "최소 판매액: " << min << endl;
     }
 }

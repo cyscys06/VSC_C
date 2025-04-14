@@ -8,7 +8,8 @@ private:
     std::string name; // 이름
     std::string num; // 계좌번호
     double zan; // 잔액
-public:
+
+    public:
     Account(); // 생성자
     Account(const std::string a, std::string b, double c); // 객체 초기화
     ~Account(); // 파괴자
