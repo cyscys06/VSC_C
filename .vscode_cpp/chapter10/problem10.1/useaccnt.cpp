@@ -8,7 +8,6 @@ Account::Account()
     num = "731502-01-354396";
     zan = 27522.0;
 }
-Account::~Account(){}
 
 Account::Account(const std::string a, std::string b, double c) 
 {
