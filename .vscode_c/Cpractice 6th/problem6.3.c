@@ -22,10 +22,20 @@ int main()
         printf("%d * %d = %d", a, b, a * b);
         break;
     case '/':
-        printf("%d / %d = %d", a, b, a / b);
+        
+        if (b != 0)
+        {
+            printf("%d / %d = %d", a, b, a / b);
+        }
+        else 
+        {
+            printf("0으로 나눌 수 없습니다.");
+        }
         break;
     default:
         printf("잘못된 입력입니다.");
         break;
     }
+
+    return 0;
 }
