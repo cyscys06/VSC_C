@@ -2,32 +2,32 @@
 #include "strngbad.h"
 using std::cout;
 
-int StringBad::num_strings = 0; // ÃÊ±âÈ­
+int StringBad::num_strings = 0; // ì´ˆê¸°í™”
 
 StringBad::StringBad(const char * s)
 {
     len = std::strlen(s); 
-    str = new char[len + 1]; // ¹®ÀÚ¿­ ±æÀÌ + 1(³Î¹®ÀÚ¶«¿¡)¸¸Å­ÀÇ Å©±â¸¦ new¿¬»êÀÚ¸¦ ÅëÇØ ¼³Á¤ ÈÄ ÀÌ¸¦ str¿¡ ¼³Á¤
-    std::strcpy(str, s); // ¾Æ¹«°Íµµ ¾ø´Â Æ÷ÀÎÅÍ º¯¼ö str¿¡ »ç¿ëÀÚ·ÎºÎÅÍ ÀÔ·Â¹ŞÀº s¸¦ ÇÒ´çÇÔ
+    str = new char[len + 1]; // ë¬¸ìì—´ ê¸¸ì´ + 1(ë„ë¬¸ìë•œì—)ë§Œí¼ì˜ í¬ê¸°ë¥¼ newì—°ì‚°ìë¥¼ í†µí•´ ì„¤ì • í›„ ì´ë¥¼ strì— ì„¤ì •
+    std::strcpy(str, s); // ì•„ë¬´ê²ƒë„ ì—†ëŠ” í¬ì¸í„° ë³€ìˆ˜ strì— ì‚¬ìš©ìë¡œë¶€í„° ì…ë ¥ë°›ì€ së¥¼ í• ë‹¹í•¨
     num_strings++;
-    cout << num_strings << ": \"" << str << "\" °´Ã¼ »ı¼º\n";
+    cout << num_strings << ": \"" << str << "\" ê°ì²´ ìƒì„±\n";
 }
 
-StringBad::StringBad() // °´Ã¼µéÀÌ µğÆúÆ®·Î °®°íÀÖ´Â °ªµé
+StringBad::StringBad() // ê°ì²´ë“¤ì´ ë””í´íŠ¸ë¡œ ê°–ê³ ìˆëŠ” ê°’ë“¤
 {
     len = 4;
     str = new char[4];
     std::strcpy(str, "C++"); 
     num_strings++;
-    cout << num_strings << ": \"" << str << "\" µğÆúÆ® °´Ã¼ »ı¼º\n";
+    cout << num_strings << ": \"" << str << "\" ë””í´íŠ¸ ê°ì²´ ìƒì„±\n";
 }
 
-StringBad::~StringBad() // ÆÄ±«ÀÚ¸¦ ½ÇÇàÇÒ¶§ Ãâ·ÂµÇ´Â °Íµé(ÇÏ³ªÀÇ °´Ã¼(Àû¿ëµÈ »ı¼ºÀÚ)¸¶´Ù °¢°¢ ÆÄ±«ÀÚ°¡ ÇÏ³ª¾¿ ÇÒ´çµÊ)
+StringBad::~StringBad() // íŒŒê´´ìë¥¼ ì‹¤í–‰í• ë•Œ ì¶œë ¥ë˜ëŠ” ê²ƒë“¤(í•˜ë‚˜ì˜ ê°ì²´(ì ìš©ëœ ìƒì„±ì)ë§ˆë‹¤ ê°ê° íŒŒê´´ìê°€ í•˜ë‚˜ì”© í• ë‹¹ë¨)
 {
-    cout << "\"" << str << "\" °´Ã¼ ÆÄ±«, ";
+    cout << "\"" << str << "\" ê°ì²´ íŒŒê´´, ";
     --num_strings;
-    cout << "³²Àº °´Ã¼ ¼ö: " << num_strings << "\n";
-    delete [] str; // µ¿Àû¸Ş¸ğ¸® »èÁ¦
+    cout << "ë‚¨ì€ ê°ì²´ ìˆ˜: " << num_strings << "\n";
+    delete [] str; // ë™ì ë©”ëª¨ë¦¬ ì‚­ì œ
 } 
 
 std::ostream & operator<<(std::ostream & os, const StringBad & st)
