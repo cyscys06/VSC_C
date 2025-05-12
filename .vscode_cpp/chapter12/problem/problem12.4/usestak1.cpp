@@ -35,6 +35,7 @@ int main()
                 else  
                 {
                     st1.push(po);
+                    cout << "주문서를 추가했습니다.\n";
                 }    
                 break;
             }
