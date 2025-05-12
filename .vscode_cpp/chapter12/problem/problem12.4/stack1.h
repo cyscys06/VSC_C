@@ -1,6 +1,6 @@
 #ifndef STACK1_H_
 #define STACK1_H_
-typedef unsigned long Item; // 타입 새롭게 정의의
+typedef unsigned long Item; // 타입 새롭게 정의
 
 class Stack
 {
