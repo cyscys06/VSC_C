@@ -27,8 +27,8 @@ int main()
     double target_wait;
     cin >> target_wait;
 
-    double perhour = 1.0;
-    double avg_wait = 0.0;
+    double perhour = 1.0; // 시간당 평균 고객 수: 평균 대기 시간 = 60분 / 평균 고객 수
+    double avg_wait = 0.0; // 디폴트트
 
     while (true)
     {
