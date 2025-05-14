@@ -9,7 +9,7 @@ bool newcustomer(double x);
 
 int main()
 {
-    std::srand(std::time(0)); // rand()의 무작위 초기화
+    std::srand(std::time(0)); // srand()의 무작위 초기화
     cout << "사례 연구: 히서 은행의 ATM\n";
     cout << "큐의 최대 길이를 입력하십시오: ";
     int qs; // ATM기에 줄설수 있는 최대 고객 수(이거보다 커지면 줄 못섬)
@@ -32,7 +32,7 @@ int main()
     long customers = 0; // 줄선 고객 수
     long served = 0; // 거래 완료한 고객 수
     long sum_line = 0; // 줄선 길이
-    int wait_time = 0; // ATM이 빌때까지 대기하는 시간 
+    int wait_time = 0; // 자기차례 될때까지 대기하는 시간 
     long line_wait = 0; // 고객들이 줄을 서서 대기한 누적 시간
 
     for (int cycle = 0; cycle < cyclelimit; cycle++) // 시뮬레이션 주기만큼 계속 반복
@@ -83,5 +83,5 @@ int main()
 // 시간 내 고객 도착 시 리턴값 true
 bool newcustomer(double x)
 {
-    return (std::rand() * x / RAND_MAX < 1);
+    return (std::rand() * x / RAND_MAX < 1); // rand(): 0 ~ 32767 사이 값 반환환
 }

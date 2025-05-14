@@ -18,7 +18,7 @@ int main()
     String rgb[3] = { String(s1), String("green"), String("blue") };
     cout << "빛의 삼원색의 이름을 하나만 입력하십시오: ";
     String ans;
-    bool success = false;
+    bool success = false; // 전역변수면 자동으로 false 할당당
     while (cin >> ans)
     {
         ans.stringlow();

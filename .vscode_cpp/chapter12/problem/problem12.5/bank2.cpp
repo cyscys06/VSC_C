@@ -81,7 +81,7 @@ int main()
     }
 
     cout << "목표 평균 대기 시간 " << target_wait << "분을 만족하는\n";
-    cout << "시간당 평균 고객 수는 대략 " << (perhour - 1) << "명입니다.\n";
+    cout << "시간당 평균 고객 수는 대략 " << (perhour) << "명입니다.\n";
     cout << "완료\n";
 
     return 0;

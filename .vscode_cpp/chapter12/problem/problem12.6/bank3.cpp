@@ -48,7 +48,7 @@ int main()
             {
                 customers++;
                 temp.set(cycle);
-                if (line1.queuecount() <= line2.queuecount()) // 둘중에 짧은 줄에 섬섬
+                if (line1.queuecount() <= line2.queuecount()) // 둘중에 짧은 줄에 섬
                     line1.enqueue(temp);
                 else
                     line2.enqueue(temp);

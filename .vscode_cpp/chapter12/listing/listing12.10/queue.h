@@ -4,8 +4,8 @@
 class Customer
 {
 private:
-    long arrive;
-    int processtime;
+    long arrive; // 큐에 도착한 시간
+    int processtime; // 거래하는데 걸리는시간간
 public:
     Customer() { arrive = processtime = 0; }
     void set(long when);
@@ -22,7 +22,7 @@ private:
     enum { Q_SIZE = 10 }; // 큐 크기
     Node * front; // 맨앞
     Node * rear; // 맨뒤
-    int items; // 큐 항목 수
+    int items; // 현재재 큐 항목 수
     const int qsize; // 큐에 넣을 수 있는 최대 항목 수
     Queue(const Queue & q) : qsize(0) {} 
     Queue & operator=(const Queue & q) { return * this; } // =연산자 오버로딩
