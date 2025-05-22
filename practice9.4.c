@@ -7,7 +7,7 @@ int main()
     int result, element[SIZE];
 
     printf("10개의 정수 입력:\n");
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         scanf_s("%d", &element[i]);
     }
@@ -20,7 +20,7 @@ int main()
 int max_elem(int arr[])
 {
     int max = arr[0];
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         if (max < arr[i])
         {
