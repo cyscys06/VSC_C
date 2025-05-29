@@ -6,7 +6,7 @@
 #include <fstream>
 using namespace std;
 
-void input(set<string> & s, ifstream & ob);
+void input(set<string> & s, ifstream & ob); // 파일에서 추출, 세트에 저장
 
 int main()
 {
@@ -21,8 +21,9 @@ int main()
     }
 
     set<string> Mat, Pat;
-    ostream_iterator<string> Cout(cout, " ");
+    ostream_iterator<string> Cout(cout, " "); // 모니터 출력용
     ostream_iterator<string> Fout(fout, "\n"); // 파일 출력용
+    // 출력할 값을 string으로 지정함
 
     input(Mat, fin1);
     input(Pat, fin2);

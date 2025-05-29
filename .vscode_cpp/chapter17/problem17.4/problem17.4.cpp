@@ -17,7 +17,7 @@ int main()
 
     while (true)
     {
-        bool f1 = static_cast<bool>(getline(fin1, str1));
+        bool f1 = static_cast<bool>(getline(fin1, str1)); // 표현식의 반환형을 bool형으로 변경한 bool형 변수. 이를 돕는 static_cast
         bool f2 = static_cast<bool>(getline(fin2, str2));
 
         if (!f1 && !f2)
@@ -33,6 +33,12 @@ int main()
             fout << str2 << endl;
         }
     }
+
+    // while (getline(fin1, str1) || getline(fin2, str2))
+    // {
+    //     if (fin1) fout << str1 << " ";
+    //     if (fin2) fout << str2 << endl;
+    // }
 
     fin1.close();
     fin2.close();
