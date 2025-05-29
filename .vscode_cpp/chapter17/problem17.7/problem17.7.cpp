@@ -5,8 +5,8 @@
 #include <algorithm>
 using namespace std;
 
-void ShowStr(const string &s); // 문자열 출력
-void GetStrs(istream & is, vector<string> & vs); // 파일에서 문자열 추출출
+void ShowStr(const string & s); // 문자열 출력
+void GetStrs(istream & is, vector<string> & vs); // 파일에서 문자열 추출
 
 class Store // 문자열을 파일에 저장하는 함수 객체
 {
@@ -17,7 +17,7 @@ public:
     void operator()(const string &s) const 
     {
         size_t len = s.size(); // int보다 안정적인 size_t
-        os.write((char*) &len, sizeof(size_t)); // 문자열 길이 저장
+        os.write((char*) &len, sizeof(size_t)); // len에서 size_t만큼의 크기를 파일에 출력
         os.write(s.data(), len); // 문자열 데이터 저장
     }
 };
@@ -55,7 +55,7 @@ int main()
     return 0;
 }
 
-void ShowStr(const string &s)
+void ShowStr(const string & s)
 {
     cout << s << endl;
 }
