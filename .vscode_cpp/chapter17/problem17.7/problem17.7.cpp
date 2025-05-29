@@ -45,7 +45,7 @@ int main()
     ifstream fin("strings.dat", ios_base::in | ios_base::binary); // 파일에서 추출
     if (fin.fail()) 
     {
-        cerr << "입력을 위한 파일을 열 수 없습니다.\n";
+        cerr << "입력을 위한 파일을 열 수 없습니다.\n"; // 버퍼 없음
         exit(EXIT_FAILURE);
     }
 
@@ -66,7 +66,7 @@ void GetStrs(istream & is, vector<string> & vs)
     while (is) 
     {
         size_t len;
-        is.read((char*) &len, sizeof(size_t));  // 길이 읽기
+        is.read((char*) &len, sizeof(size_t));  // 길이 읽기, 반드시 char*형 매개변수 필요
         if (is.fail()) 
         {
             break; // 읽기 실패 시 탈출

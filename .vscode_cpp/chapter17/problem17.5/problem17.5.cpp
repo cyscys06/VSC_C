@@ -37,7 +37,7 @@ int main()
     cout << endl;
 
     set<string> MatPat;
-    set_union(Mat.begin(), Mat.end(), Pat.begin(), Pat.end(), insert_iterator(MatPat, MatPat.begin()));
+    set_union(Mat.begin(), Mat.end(), Pat.begin(), Pat.end(), insert_iterator(MatPat, MatPat.begin())); // 합집합
 
     copy(MatPat.begin(), MatPat.end(), Fout); 
     return 0;
