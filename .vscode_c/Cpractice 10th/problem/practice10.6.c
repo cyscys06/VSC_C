@@ -10,7 +10,7 @@ int main()
     for(int i = 0; i < 5; i++)
     {
         printf("%d번째 과목: ", i + 1);
-        gets(str[i]); // gets(): 입력
+        gets_s(str[i], 100); // gets(): 입력
     }
 
     printf("수강중인 과목:\n");
