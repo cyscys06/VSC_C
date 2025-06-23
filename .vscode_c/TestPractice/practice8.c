@@ -48,5 +48,6 @@ int main()
     }
     printf("최대: %.2lf, 최소: %.2lf", max, min);
 
+    free(arr);
     return 0;
 }

@@ -14,7 +14,7 @@ int main()
     {
         if (str[i] != str[len - 1 - i])
         {
-            palindrome = false;
+            palindrome = false; // 플래그 만들어놓고 조건 한번이라도 불만족시 플래스 false로 바꾸기
         }
     }
 
