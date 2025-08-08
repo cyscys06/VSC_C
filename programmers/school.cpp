@@ -2,7 +2,7 @@
 #include <vector>
 
 using namespace std;
-const int M = 1000000007; // 루프 반복할때마다 M으로 나눠줘서 혹여 M보다 큰 경우의수 나오는 경우에 대비
+const int M = 1000000007;
 
 int solution(int m, int n, vector<vector<int>> puddles) // puddles 에는 물웅덩이 좌표만 담겨있음 -> 좌표 저장하는 2차원 벡터 별도로 만들기
 {
@@ -46,7 +46,7 @@ int solution(int m, int n, vector<vector<int>> puddles) // puddles 에는 물웅
                 coordinate[i][j] += (coordinate[i - 1][j] + coordinate[i][j - 1]);
             }
 
-            coordinate[i][j] %= M; // 루프마다 M으로 나눠서 M보다 큰수 사라지는 현상 방지
+            coordinate[i][j] %= M; // 루프마다 M으로 나눠서 경로 개수가 오버플로우되는 현상 방지
         }
     }
 
