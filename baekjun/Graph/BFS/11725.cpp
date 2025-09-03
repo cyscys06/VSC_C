@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// BFS 풀이
 int main()
 {
     int N, a, b; // 노드 개수, 앞, 뒷값
