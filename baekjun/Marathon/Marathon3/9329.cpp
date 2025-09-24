@@ -62,4 +62,6 @@ int main()
 
         cout << totalmoney << '\n';
     }
+
+    return 0;
 }
